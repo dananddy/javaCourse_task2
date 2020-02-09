@@ -16,11 +16,12 @@ public class Controller {
     public void readUserData(){
         Scanner scanner = new Scanner(System.in);
 
+        /*
         model.setBoundries();
         model.setSecretValue();
         model.getUserNumber();
-
-        view.printWinMassege(view.OUTPUT_WIN_MESSAGE, secretNumber, View.OUTPUT_STATISTIC, userStatList);
+        */
+       // view.printWinMassege(view.OUTPUT_WIN_MESSAGE, secretNumber, View.OUTPUT_STATISTIC, userStatList);
     }
 
 
