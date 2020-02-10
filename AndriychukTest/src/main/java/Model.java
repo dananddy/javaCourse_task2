@@ -14,7 +14,6 @@ public class Model {
         return (int) (Math.random() * (MAX_BOUND - MIN_BOUND + 1) + MIN_BOUND);
     }
 
-    public final int getValOfSecretVal(){ return setRandValueOfSecretNumber();}
 
     public Pair getValOfBounds(){return bounds;}
 
@@ -24,14 +23,16 @@ public class Model {
         else return true;
     }
 
-    public Pair setBoundries(int newValueOfBound){
+    public Pair setBoundries(int newValueOfBound, int secretNumberForCheck){
 
         int minValNum = bounds.getKey();
         int maxValNum = bounds.getValue();
 
-        if (abs(minValNum-newValueOfBound)<abs(maxValNum - newValueOfBound))  minValNum = newValueOfBound;
-        else if (abs(minValNum-newValueOfBound)> abs(maxValNum - newValueOfBound))  maxValNum = newValueOfBound;
-        else maxValNum = newValueOfBound;
+        if (newValueOfBound < secretNumberForCheck) minValNum = newValueOfBound;
+        else if (newValueOfBound > secretNumberForCheck) maxValNum = newValueOfBound;
+//        if (abs(minValNum-newValueOfBound)<abs(maxValNum - newValueOfBound))  minValNum = newValueOfBound;
+//        else if (abs(minValNum-newValueOfBound)> abs(maxValNum - newValueOfBound))  maxValNum = newValueOfBound;
+//        else maxValNum = newValueOfBound;
 
         return bounds = new Pair(minValNum,maxValNum);
     }

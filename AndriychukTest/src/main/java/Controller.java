@@ -9,12 +9,12 @@ public class Controller {
     private int secretNumber;
     private ArrayList statArray = new ArrayList();
 
-    private Controller(Model model, View view){
+    public Controller(Model model, View view){
         this.model = model;
         this.view = view;
     }
 
-    private void readUserData(){
+    public void readUserData(){
         Scanner scanner = new Scanner(System.in);
 
         secretNumber = model.setRandValueOfSecretNumber();
@@ -38,7 +38,8 @@ public class Controller {
             else{
                 view.printMessage(View.OUTPUT_INFO_ON_BOUNDARIES);
 
-                model.setBoundries(userValue);
+
+                model.setBoundries(userValue, secretNumber);
 
                 view.printBounds(model.getValOfBounds());
                 statArray.add(userValue);
@@ -51,6 +52,8 @@ public class Controller {
     }
 
     private boolean checkBounds(int userNumber){
+        //if ()
+
         return model.checkBounds(userNumber);
     }
     private boolean checkGuess(int userNumber){
