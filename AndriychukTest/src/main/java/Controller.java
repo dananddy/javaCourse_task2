@@ -27,6 +27,8 @@ public class Controller {
     private int getUserNumber(Scanner scan){
 
         view.printMessage(View.ENTER_FIRST_NUMBER);
+
+
         int userValue = scan.nextInt();
 
         while(!checkGuess(userValue)){
