@@ -10,6 +10,8 @@ public class View {
     public static final String WRONG_INPUT_NOT_INTEGER = "Please, enter integer number!";
     public static final String WRONG_INPUT_OUT_OF_BOUNDARIES = "Please, enter number between given range - ";
 
+    public static final String OUTPUT_INFO_ON_BOUNDARIES = "Goog guess. Now you should enter number between:";
+
     public static final String OUTPUT_WIN_MESSAGE = "YOU GUESSED!!!\n";
     public static final String OUTOUT_LOSE_MESSAGE= "OH, you out of tries. Try again!";
 

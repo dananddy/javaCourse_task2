@@ -8,18 +8,27 @@ public class Model {
 
     private Pair<Integer, Integer> bounds = new Pair(0,100);
 
-    public int setRandValueOfSecretNumber(int MIN_BOUND,int MAX_BOUND){
+    public int setRandValueOfSecretNumber(){
+        int MAX_BOUND = bounds.getValue();
+        int MIN_BOUND = bounds.getKey();
         return (int) (Math.random() * (MAX_BOUND - MIN_BOUND + 1) + MIN_BOUND);
     }
+    public boolean checkBounds(int numberForCheck){
+        if(numberForCheck<bounds.getKey()) return false;
+        else if (numberForCheck>bounds.getValue()) return false;
+        else return true;
+    }
 
-    public Pair setBoundries(Pair<Integer, Integer> bound, int newValueOfBound){
-        int minValNum = bound.getKey();
-        int maxValNum = bound.getValue();
+    public Pair setBoundries(int newValueOfBound){
+
+        int minValNum = bounds.getKey();
+        int maxValNum = bounds.getValue();
+
         if (abs(minValNum-newValueOfBound)<abs(maxValNum - newValueOfBound))  minValNum = newValueOfBound;
         else if (abs(minValNum-newValueOfBound)> abs(maxValNum - newValueOfBound))  maxValNum = newValueOfBound;
         else maxValNum = newValueOfBound;
 
-        return bound;
+        return bounds = new Pair(minValNum,maxValNum);
     }
 
 
