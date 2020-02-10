@@ -13,6 +13,11 @@ public class Model {
         int MIN_BOUND = bounds.getKey();
         return (int) (Math.random() * (MAX_BOUND - MIN_BOUND + 1) + MIN_BOUND);
     }
+
+    public final int setValOfSecretVal(){ return setRandValueOfSecretNumber();}
+
+    public Pair getValOfBounds(){return bounds;}
+
     public boolean checkBounds(int numberForCheck){
         if(numberForCheck<bounds.getKey()) return false;
         else if (numberForCheck>bounds.getValue()) return false;
