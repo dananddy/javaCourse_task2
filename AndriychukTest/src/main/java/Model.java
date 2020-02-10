@@ -14,7 +14,7 @@ public class Model {
         return (int) (Math.random() * (MAX_BOUND - MIN_BOUND + 1) + MIN_BOUND);
     }
 
-    public final int setValOfSecretVal(){ return setRandValueOfSecretNumber();}
+    public final int getValOfSecretVal(){ return setRandValueOfSecretNumber();}
 
     public Pair getValOfBounds(){return bounds;}
 

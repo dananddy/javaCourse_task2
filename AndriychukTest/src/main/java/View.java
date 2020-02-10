@@ -20,6 +20,6 @@ public class View {
 
 
     public void printMessage(String message){System.out.println(message); }
-    public void printBounds(Pair Number){System.out.println(Number); }
-    public void printWinMassege(String messageWin, int secretNumber, String messageStat, ArrayList statistic){System.out.println(messageWin + secretNumber + messageStat +statistic);}
+    public void printBounds(Pair Number){System.out.println(Number.getKey() + " - " + Number.getValue()); }
+    public void printWinMassege(String messageWin, int secretNumber, String messageStat, ArrayList statistic){System.out.println(messageWin + secretNumber+'\n' + messageStat +statistic);}
 }
